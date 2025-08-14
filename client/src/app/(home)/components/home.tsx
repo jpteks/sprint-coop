@@ -221,7 +221,7 @@ export default function Home() {
         <p className="mt-2 text-xs sm:text-sm md:text-base max-w-xl mx-auto">
           Become part of a thriving network dedicated to positively impacting farming communities.
         </p>
-        <div className="mt-4 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+        <div className="mt-4 flex  justify-center gap-3 sm:gap-4">
           <Button className="bg-green-600 hover:bg-green-700 font-sans text-sm sm:text-[15px] text-white rounded-md px-4 py-2">
             Become a member
           </Button>
