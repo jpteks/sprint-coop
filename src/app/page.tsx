@@ -1,11 +1,24 @@
-import Image from "next/image";
+// app/layout.tsx
+import "./globals.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Home from "../app/home/page"; 
 
-export default function Home() {
+export default function RootLayout() {
   return (
-    <>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the main entry point of our application.</p>
-      <p>Explore the features and enjoy your stay!</p>
-    </>
+    <html lang="en">
+      <body className="flex flex-col min-h-screen">
+        {/* Navbar */}
+        <Navbar />
+
+        {/* Main content */}
+        <main className="flex-1">
+          <Home /> {/* Render your home page directly here */}
+        </main>
+
+        {/* Footer */}
+        <Footer />
+      </body>
+    </html>
   );
 }
