@@ -26,15 +26,19 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2">
           <div className="relative w-20 h-20">
             <Image
-              src="/logo.jpeg"
+              src="/logo2.png"
               alt="SOLIF COOP Logo"
               fill
               className="object-contain"
             />
           </div>
-          <h1 className="text-sm md:text-lg font-bold text-green-600 leading-none">
+         <div className="flex flex-col">
+         <h1 className="text-sm md:text-lg font-bold text-green-600 leading-none">
             SOLIF-COOP-BOD
           </h1>
+          <p className="text-xs text-yellow-400">Spring of Life Cooperative with Board of Directors</p>
+          
+         </div>
         </Link>
 
         {/* Desktop Nav Links */}

@@ -13,9 +13,9 @@ export default function Footer() {
         {/* Logo & About */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="relative w-8 h-8">
+            <div className="relative w-16 h-16">
               <Image
-                src="/logo.jpeg"
+                src="/logo2.jpeg"
                 alt="SOLIF COOP Logo"
                 fill
                 className="object-contain"
@@ -23,7 +23,7 @@ export default function Footer() {
             </div>
             <div>
               <h2 className="text-sm font-bold text-yellow-400">SOLIF-COOP-BOD</h2>
-              <p className="text-xs">Spring of Life Cooperative</p>
+              <p className="text-xs">Spring of Life Cooperative with Board of Directors</p>
             </div>
           </div>
 
