@@ -111,7 +111,7 @@ export default function AboutPage() {
           <h1 className="text-white text-2xl md:text-3xl font-bold text-center">
             Empowering Farmers, Transforming Agriculture, Shaping the Future
           </h1>
-          <p className="text-white text-md md:text-xl text-center mt-4 max-w-3xl">
+          <p className="text-white text-md md:text-xl  text-justify mt-4 max-w-3xl">
             Since 2022, SOLIF-COOP-BOD has been training farmers, advancing the
             agro–value chain, and transforming crops like cassava and other
             agricultural products. We are also involved in livestock and
