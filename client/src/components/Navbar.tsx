@@ -19,7 +19,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="w-full border-b shadow-sm bg-white sticky top-0 z-50 ">
+    <header className="w-full border-b shadow-sm bg-white sticky top-0 z-50 font-sans ">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         
         {/* Logo */}
@@ -36,7 +36,7 @@ export default function Navbar() {
          <h1 className="text-sm md:text-lg font-bold text-green-600 leading-none">
             SOLIF-COOP-BOD
           </h1>
-          <p className="text-xs text-yellow-400">Spring of Life Cooperative with Board of Directors</p>
+          <p className="md:text-xs text-8px text-yellow-400">Spring of Life Cooperative with Board of Directors</p>
           
          </div>
         </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`text-lg ${
+                    className={`text-[14px] font-sans ${
                       pathname === link.href
                         ? "text-green-600 font-medium"
                         : "text-gray-700 hover:text-green-600"
