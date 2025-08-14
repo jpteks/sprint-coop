@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="flex items-center gap-2 mb-4">
             <div className="relative w-16 h-16">
               <Image
-                src="/logo2.jpeg"
+                src="/logo.jpeg"
                 alt="SOLIF COOP Logo"
                 fill
                 className="object-contain"
