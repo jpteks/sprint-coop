@@ -6,7 +6,7 @@ import { Facebook, Twitter, Linkedin, MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-green-800 text-white">
+    <footer className="bg-green-800 text-white font-sans">
       {/* Top Grid */}
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
         
