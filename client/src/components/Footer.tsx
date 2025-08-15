@@ -22,7 +22,7 @@ export default function Footer() {
               />
             </div>
             <div>
-            <p className="text-xs">
+            <p className="text-base">
                 Spring of Life Cooperative society with Board of Directors
               </p>
               <h2 className="text-sm font-bold text-yellow-400">
@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <p className="text-sm leading-relaxed mb-5">
+          <p className="text-base leading-relaxed mb-5">
             Empowering farmers and enriching communities through cooperative
             agriculture, training, and sustainable development initiatives.
           </p>
@@ -65,7 +65,7 @@ export default function Footer() {
         {/* Quick Links */}
         <div>
           <h3 className="text-yellow-400 font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-base">
             <li>
               <Link href="/" className="hover:text-yellow-400">
                 Home
@@ -77,7 +77,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/service" className="hover:text-yellow-400">
+              <Link href="/services" className="hover:text-yellow-400">
                 Our Services
               </Link>
             </li>
@@ -98,7 +98,7 @@ export default function Footer() {
         {/* Services */}
         <div>
           <h3 className="text-yellow-400 font-semibold mb-4">Services</h3>
-          <ul className="space-y-2 text-sm">
+          <ul className="space-y-2 text-base">
             <li>
               <Link
                 href="/services"
@@ -145,7 +145,7 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h3 className="text-yellow-400 font-semibold mb-4">Contact Info</h3>
-          <ul className="space-y-3 text-sm">
+          <ul className="space-y-3 text-base">
             <li className="flex items-start gap-2">
               <MapPin size={16} className="text-yellow-400 mt-0.5" />
               <span>

@@ -107,18 +107,18 @@ export default function AboutPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/70 flex items-center justify-center flex-col px-4">
-          <h1 className="text-xl  md:text-3xl lg:text-4xl font-bold leading-snug">
-            Empowering Farmers, Transforming Agriculture, Shaping the Future
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center flex-col px-4">
+          <h1 className="text-xl text-white md:text-3xl lg:text-4xl font-bold leading-snug">
+            Empowering Farmers, Transforming Agriculture, <span className="text-green-400">Shaping the Future</span>
           </h1>
-          <p className="mt-4 max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-6 sm:leading-7 md:leading-8 font-normal opacity-90 text-sm sm:text-base md:text-lg">
+          <p className="mt-4 max-w-full text-white sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-6 sm:leading-7 md:leading-8 font-normal opacity-90 text-base sm:text-base md:text-lg">
             Since 2022, SOLIF-COOP-BOD has been training farmers, advancing the
             agro–value chain, and transforming crops like cassava and other
             agricultural products. We are also involved in livestock and
             fisheries products. Through cooperation, innovation, and sustainable
             development, we’re building stronger agricultural communities for
             generations to come.
-          </p>
+          </p> 
         </div>
       </header>
 
@@ -135,7 +135,7 @@ export default function AboutPage() {
         >
           <Card className="max-w-3xl mx-auto border-l-4 border-green-500">
             <CardContent className="p-6">
-              <p className="text-lg text-gray-700">
+              <p className="text-base text-gray-700">
                 SOLIF-COOP-BOD (Spring Of Life Cooperative Society with Board of
                 Directors) was formed to support farmers through sustainable
                 agricultural practices, credit union, and community empowerment.
@@ -163,7 +163,7 @@ export default function AboutPage() {
             {companyValues.map((value, index) => (
               <Card key={index} className="text-center">
                 <CardHeader>
-                  <div className="text-4xl">
+                  <div className="text-base">
                     <value.icon />
                   </div>
                   <CardTitle>{value.title}</CardTitle>
@@ -183,7 +183,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-center mb-6">
             Our <span className="text-green-600"> Vision</span>
           </h2>
-          <p className="text-lg text-gray-700">
+          <p className="text-base text-gray-700">
             We envision a future where farmers thrive, communities are
             self-reliant, and the environment is preserved for future
             generations.
@@ -213,7 +213,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-center mb-10">
             Our <span className="text-green-600">Leadership</span>
           </h2>
-          <p className="text-center mb-6 text-gray-700">
+          <p className="text-center mb-6 text-lg text-gray-700">
             Experienced leaders committed to advancing agricultural cooperation
             and community development.
           </p>

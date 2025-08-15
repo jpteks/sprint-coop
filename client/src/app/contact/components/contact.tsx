@@ -24,7 +24,7 @@ export default function ContactPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/70 flex items-center justify-center flex-col px-4">
+        <div className="absolute inset-0 bg-black/ flex items-center justify-center flex-col px-4">
           <h1 className="text-white text-2xl md:text-3xl font-bold text-center">
             Contact Us
           </h1>
@@ -37,7 +37,7 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div>
             <h2 className="text-2xl font-semibold mb-4">Get In Touch</h2>
-            <p className="mb-6 text-gray-600">
+            <p className="mb-6 text-base text-gray-600">
               Our team is ready to assist you with any questions, feedback, or
               requests you may have.
             </p>
@@ -91,7 +91,7 @@ export default function ContactPage() {
       <section className="py-12 bg-gray-50 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-semibold mb-4">Find Us</h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 text-base mb-6">
             Visit our main office for a face-to-face meeting with our team.
           </p>
           <div className="border border-gray-300 p-6 rounded-lg bg-white shadow-sm">

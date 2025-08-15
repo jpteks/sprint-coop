@@ -4,7 +4,14 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Users, TrendingUp, CheckCircle, Award, Lightbulb, Leaf } from "lucide-react";
+import {
+  Users,
+  TrendingUp,
+  CheckCircle,
+  Award,
+  Lightbulb,
+  Leaf,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -45,21 +52,32 @@ export default function Home() {
         className="relative h-[550px] sm:h-[600px] md:h-[650px] flex flex-col items-center justify-center text-center px-4"
       >
         <div className="absolute inset-0">
-          <Image src="/home.jpeg" alt="Farmers working" fill priority className="object-cover" />
+          <Image
+            src="/home.jpeg"
+            alt="Farmers working"
+            fill
+            priority
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
         <div className="relative z-10 text-white flex flex-col items-center">
           <h1 className="text-xl  md:text-3xl lg:text-4xl font-bold leading-snug">
-            Empowering Agriculture, <span className="text-green-400">Enriching Communities</span>
+            Empowering Agriculture,{" "}
+            <span className="text-green-400">Enriching Communities</span>
           </h1>
-          <p className="mt-4 max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-6 sm:leading-7 md:leading-8 font-normal opacity-90 text-sm sm:text-base md:text-lg">
-            SPRING OF LIFE Cooperative Society with Board of Directors (SOLIF-COOP-BOD) transforms
-            agricultural communities through cassava processing, farmer training, and cooperative
-            credit services. Join us in building sustainable farming futures.
+          <p className="mt-4 max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-6 sm:leading-7 md:leading-8 font-normal opacity-90 text-base sm:text-base md:text-lg">
+            SPRING OF LIFE Cooperative Society with Board of Directors
+            (SOLIF-COOP-BOD) is a farmer-led cooperative in Tiko, Cameroon,
+            dedicated to transforming agriculture and improving rural
+            livelihoods. Through innovation, sustainability, and community
+            spirit, we empower farmers to increase productivity, add value to
+            their harvests, and access better markets — locally and
+            internationally.
           </p>
 
-          <div className="mt-6 flex flex-wrap justify-center gap-4">
+          <div className="mt-4 flex flex-wrap justify-center gap-4">
             {/* Become a member */}
             <a
               href="https://wa.me/237677287778?text=I%20wish%20to%20be%20a%20member%20of%20SOLIF-COOP-BOD"
@@ -87,7 +105,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 mt-12 flex flex-wrap justify-center gap-4 sm:gap-6">
+        <div className="relative z-10 mt-4 flex flex-wrap justify-center gap-4 sm:gap-6">
           <Card className="flex items-center gap-2 sm:gap-4 bg-black/40 backdrop-blur-md text-white px-3 sm:px-4 py-2 border-none w-32 sm:w-40">
             <Users className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-500" />
             <div>
@@ -124,25 +142,25 @@ export default function Home() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Our <span className="text-green-600">Mission</span>
             </h2>
-            <p className="text-gray-600 mb-8 text-sm sm:text-base">
-              SOLIF COOP is committed to transforming the agricultural landscape through education,
-              innovation, and sustainable practices.
+            <p className="text-gray-600 mb-8 text-base sm:text-base">
+              SOLIF COOP is committed to transforming the agricultural landscape
+              through education, innovation, and sustainable practices.
             </p>
 
             <Card className="bg-green-50 border-l-4 border-green-600 shadow">
               <CardContent className="pt-4 sm:pt-6">
-                <p className="text-gray-700 text-xs sm:text-sm">
-                  SOLIF–COOP–BOD was formed under the Cooperative Societies Act, with the mission to
-                  bring farmers together and improve livelihoods through collective resources and
-                  education.
+                <p className="text-gray-700 text-base sm:text-sm">
+                  SOLIF–COOP–BOD was formed under the Cooperative Societies Act,
+                  with the mission to bring farmers together and improve
+                  livelihoods through collective resources and education.
                 </p>
-                <p className="mt-2 sm:mt-4 text-gray-700 text-xs sm:text-sm">
-                  Our main mission is to build a higher and more economically focused community with
-                  focus on processing, job creation, and market penetration in Cameroon and Central
-                  Africa.
+                <p className="mt-2 sm:mt-4 text-gray-700 text-base sm:text-sm">
+                  Our main mission is to build a higher and more economically
+                  focused community with focus on processing, job creation, and
+                  market penetration in Cameroon and Central Africa.
                 </p>
               </CardContent>
             </Card>
@@ -150,15 +168,37 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
             {[
-              { icon: <Award className="w-12 h-12 text-green-500 mx-auto mb-2 sm:mb-4" />, desc: "Equipping farmers with modern skills and knowledge." },
-              { icon: <Lightbulb className="w-12 h-12 text-yellow-500 mx-auto mb-2 sm:mb-4" />, desc: "Encouraging creative solutions in agriculture." },
-              { icon: <Leaf className="w-12 h-12 text-green-700 mx-auto mb-2 sm:mb-4" />, desc: "Promoting practices that protect our environment." },
-              { icon: <Users className="w-12 h-12 text-blue-500 mx-auto mb-2 sm:mb-4" />, desc: "Building strong and supportive farming communities." },
+              {
+                icon: (
+                  <Award className="w-12 h-12 text-green-500 mx-auto mb-2 sm:mb-4" />
+                ),
+                desc: "Equipping farmers with modern skills and knowledge.",
+              },
+              {
+                icon: (
+                  <Lightbulb className="w-12 h-12 text-yellow-500 mx-auto mb-2 sm:mb-4" />
+                ),
+                desc: "Encouraging creative solutions in agriculture.",
+              },
+              {
+                icon: (
+                  <Leaf className="w-12 h-12 text-green-700 mx-auto mb-2 sm:mb-4" />
+                ),
+                desc: "Promoting practices that protect our environment.",
+              },
+              {
+                icon: (
+                  <Users className="w-12 h-12 text-blue-500 mx-auto mb-2 sm:mb-4" />
+                ),
+                desc: "Building strong and supportive farming communities.",
+              },
             ].map((item, i) => (
               <Card key={i} className="text-center hover:shadow-md transition">
                 <CardContent className="p-4 sm:p-6">
                   {item.icon}
-                  <p className="text-xs sm:text-sm text-gray-600">{item.desc}</p>
+                  <p className="text-base sm:text-sm text-gray-600">
+                    {item.desc}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -181,15 +221,27 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mt-8">
             {selectedServices.map((service, i) => (
-              <Card key={i} className="overflow-hidden hover:shadow-md transition">
+              <Card
+                key={i}
+                className="overflow-hidden hover:shadow-md transition"
+              >
                 <div className="w-full h-40 relative">
-                  <Image src={service.image} alt={service.title} fill className="object-cover" />
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <CardHeader className="pt-2 sm:pt-4 px-2 sm:px-4">
-                  <CardTitle className="text-sm sm:text-base md:text-lg">{service.title}</CardTitle>
+                  <CardTitle className="text-sm sm:text-base md:text-lg">
+                    {service.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="px-2 sm:px-4 pb-4">
-                  <p className="text-xs sm:text-sm md:text-sm text-gray-600">{service.description}</p>
+                  <p className="text-base sm:text-sm md:text-sm text-gray-600">
+                    {service.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -236,9 +288,12 @@ export default function Home() {
         viewport={{ once: true }}
         className="bg-gray-50 text-black text-center py-8 sm:py-10"
       >
-        <h2 className="text-lg sm:text-xl font-semibold">Ready to Join Our Community?</h2>
-        <p className="mt-2 text-xs sm:text-sm md:text-base max-w-xl mx-auto">
-          Become part of a thriving network dedicated to positively impacting farming communities.
+        <h2 className="text-lg sm:text-xl font-semibold">
+          Ready to Join Our Community?
+        </h2>
+        <p className="mt-2 text-base sm:text-sm md:text-base max-w-xl mx-auto">
+          Become part of a thriving network dedicated to positively impacting
+          farming communities.
         </p>
         <div className="mt-4 flex justify-center gap-3 sm:gap-4">
           {/* Become Member */}
