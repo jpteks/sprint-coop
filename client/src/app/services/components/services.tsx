@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 import { motion } from "framer-motion";
-export const metadata:Metadata = {
+export const metadata: Metadata = {
   title: "Our Services | AgriSmart",
   description:
     "Discover SOLIF-COOP-BOD's range of agricultural services, from crop advisory to market linkages, aimed at transforming farming and boosting yields.",
@@ -22,7 +22,9 @@ export default function ServicesPage() {
           className="object-cover object-bottom"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">Our Services</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
+            Our Services
+          </h1>
         </div>
       </section>
 
@@ -52,11 +54,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Text */}
-            <div
-              className={`${
-                index % 2 === 1 ? "md:order-1" : "md:order-2"
-              }`}
-            >
+            <div className={`${index % 2 === 1 ? "md:order-1" : "md:order-2"}`}>
               <h2 className="text-2xl font-semibold mb-3 text-green-600">
                 {service.title}
               </h2>
@@ -84,10 +82,27 @@ export default function ServicesPage() {
           profitable farming.
         </p>
         <div className="flex justify-center gap-4">
-          <Button className="bg-green-600 hover:bg-green-700">
-            Become a member
-          </Button>
-          <Button variant="outline">Contact Us</Button>
+          <a
+            href="https://wa.me/237677287778?text=I%20wish%20to%20be%20a%20member%20of%20SOLIF-COOP-BOD"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="bg-green-600 hover:bg-green-700">
+              Become a member
+            </Button>
+          </a>
+          <a
+            href="https://wa.me/237677287778"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              variant="outline"
+              className="text-black bg-transparent hover:bg-white hover:text-green-700 text-sm sm:text-[15px] rounded-md px-4 py-2"
+            >
+              Contact Us
+            </Button>
+          </a>
         </div>
       </motion.section>
     </main>
@@ -95,37 +110,35 @@ export default function ServicesPage() {
 }
 
 const services = [
-    {
-        title: "Cassava, Other Crops & Livestock Farming",
-        description:
-          "We specialize in transforming agricultural products such as cassava, cocoa, and other high-value crops into market-ready goods, while also supporting livestock farming to improve productivity, sustainability, and income for farmers.",
-        image: "/services.jpeg",
-      },
-      
-    {
-      title: "Credit Union for Farmers",
-      description:
-        "Providing affordable financial services, savings plans, and loans to help farmers invest in better seeds, equipment, and farming practices.",
-      image: "/credit.jpeg",
-    },
-    {
-      title: "Agro Value Chain Participation",
-      description:
-        "We actively engage in the agricultural value chain, connecting farmers to processors, distributors, and markets to ensure fair trade and stable demand.",
-      image: "/agro.jpeg",
-    },
-    {
-      title: "Farmers Training & Capacity Building",
-      description:
-        "Empowering farmers through training in modern agricultural techniques, sustainable farming practices, and agribusiness management.",
-      image: "/farmers.jpeg",
-    },
-    {
-      title: "Fisheries Development",
-      description:
-        "Promoting sustainable fish farming and aquaculture practices to increase productivity, create jobs, and ensure food security for local communities.",
-      image: "/fish.jpeg",
-    },
-   
-  ];
-  
+  {
+    title: "Cassava, Other Crops & Livestock Farming",
+    description:
+      "We specialize in transforming agricultural products such as cassava, cocoa, and other high-value crops into market-ready goods, while also supporting livestock farming to improve productivity, sustainability, and income for farmers.",
+    image: "/cassava.jpeg",
+  },
+
+  {
+    title: "Credit Union for Farmers",
+    description:
+      "Providing affordable financial services, savings plans, and loans to help farmers invest in better seeds, equipment, and farming practices.",
+    image: "/credit.jpeg",
+  },
+  {
+    title: "Agro Value Chain Participation",
+    description:
+      "We actively engage in the agricultural value chain, connecting farmers to processors, distributors, and markets to ensure fair trade and stable demand.",
+    image: "/agro.jpeg",
+  },
+  {
+    title: "Farmers Training & Capacity Building",
+    description:
+      "Empowering farmers through training in modern agricultural techniques, sustainable farming practices, and agribusiness management.",
+    image: "/farmers.jpeg",
+  },
+  {
+    title: "Fisheries Development",
+    description:
+      "Promoting sustainable fish farming and aquaculture practices to increase productivity, create jobs, and ensure food security for local communities.",
+    image: "/fish.jpeg",
+  },
+];

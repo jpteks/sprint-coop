@@ -58,16 +58,32 @@ export default function Home() {
             agricultural communities through cassava processing, farmer training, and cooperative
             credit services. Join us in building sustainable farming futures.
           </p>
+
           <div className="mt-6 flex flex-wrap justify-center gap-4">
-            <Button className="bg-green-600 hover:bg-green-700 font-sans text-sm sm:text-[15px] text-white rounded-md px-4 py-2">
-              Become a member
-            </Button>
-            <Button
-              variant="outline"
-              className="text-white border-white hover:bg-white hover:text-black text-sm sm:text-[15px] rounded-md px-4 py-2"
+            {/* Become a member */}
+            <a
+              href="https://wa.me/237677287778?text=I%20wish%20to%20be%20a%20member%20of%20SOLIF-COOP-BOD"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Contact Us
-            </Button>
+              <Button className="bg-green-600 hover:bg-green-700 font-sans text-sm sm:text-[15px] text-white rounded-md px-4 py-2">
+                Become a member
+              </Button>
+            </a>
+
+            {/* Contact Us */}
+            <a
+              href="https://wa.me/237677287778"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                className="text-white border-white hover:bg-white hover:text-black text-sm sm:text-[15px] rounded-md px-4 py-2"
+              >
+                Contact Us
+              </Button>
+            </a>
           </div>
         </div>
 
@@ -180,8 +196,11 @@ export default function Home() {
           </div>
 
           <div className="mt-8 sm:mt-10 text-center">
-            <Button className="bg-green-600 hover:bg-green-700 font-sans text-sm sm:text-[15px] text-white rounded-md px-4 py-2">
-              View All Services
+            <Button
+              asChild
+              className="bg-green-600 hover:bg-green-700 font-sans text-sm sm:text-[15px] text-white rounded-md px-4 py-2"
+            >
+              <a href="/services">View All Services</a>
             </Button>
           </div>
         </div>
@@ -221,16 +240,31 @@ export default function Home() {
         <p className="mt-2 text-xs sm:text-sm md:text-base max-w-xl mx-auto">
           Become part of a thriving network dedicated to positively impacting farming communities.
         </p>
-        <div className="mt-4 flex  justify-center gap-3 sm:gap-4">
-          <Button className="bg-green-600 hover:bg-green-700 font-sans text-sm sm:text-[15px] text-white rounded-md px-4 py-2">
-            Become a member
-          </Button>
-          <Button
-            variant="outline"
-            className="text-black bg-transparent hover:bg-white hover:text-green-700 text-sm sm:text-[15px] rounded-md px-4 py-2"
+        <div className="mt-4 flex justify-center gap-3 sm:gap-4">
+          {/* Become Member */}
+          <a
+            href="https://wa.me/237677287778?text=I%20wish%20to%20be%20a%20member%20of%20SOLIF-COOP-BOD"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Contact Us
-          </Button>
+            <Button className="bg-green-600 hover:bg-green-700">
+              Become a member
+            </Button>
+          </a>
+
+          {/* Contact Us */}
+          <a
+            href="https://wa.me/237677287778"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              variant="outline"
+              className="text-black bg-transparent hover:bg-white hover:text-green-700 text-sm sm:text-[15px] rounded-md px-4 py-2"
+            >
+              Contact Us
+            </Button>
+          </a>
         </div>
       </motion.section>
     </div>

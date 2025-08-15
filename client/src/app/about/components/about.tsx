@@ -104,7 +104,7 @@ export default function AboutPage() {
           src="/about.jpeg"
           alt="About SOLIF-COOP-BOD"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
         <div className="absolute inset-0 bg-black/70 flex items-center justify-center flex-col px-4">
