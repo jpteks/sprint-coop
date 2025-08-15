@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
+
 export const metadata: Metadata = {
   title: "Contact Us - AgriSmart",
   description:
@@ -14,21 +15,21 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="font-sans">
-     <header className="relative w-full h-[60vh] md:h-[50vh]">
-           <Image
-             src="/farmer.png"
-             alt="About SOLIF-COOP-BOD"
-             fill
-             className="object-cover"
-             priority
-           />
-           <div className="absolute inset-0 bg-black/70 flex items-center justify-center flex-col px-4">
-             <h1 className="text-white text-2xl md:text-3xl font-bold text-center">
-               Contact Us
-             </h1>
-          
-           </div>
-         </header>
+      {/* Header */}
+      <header className="relative w-full h-[60vh] md:h-[50vh]">
+        <Image
+          src="/farmer.png"
+          alt="About SOLIF-COOP-BOD"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/70 flex items-center justify-center flex-col px-4">
+          <h1 className="text-white text-2xl md:text-3xl font-bold text-center">
+            Contact Us
+          </h1>
+        </div>
+      </header>
 
       {/* Contact Info & Form */}
       <section className="py-12 px-4 md:px-12 bg-white">
@@ -41,29 +42,25 @@ export default function ContactPage() {
               requests you may have.
             </p>
             <ul className="space-y-4 text-gray-700">
-             
-           
-                          <li className="flex items-start gap-2">
-                            <MapPin size={16} className="text-yellow-400 mt-0.5" />
-                            <span>
-                              Tiko-Douala Road Cameroon<br />
-                              
-                            </span>
-                          </li>
-                          <li className="flex flex-col">
+              <li className="flex items-start gap-2">
+                <MapPin size={16} className="text-yellow-400 mt-0.5" />
+                <span>
+                  Tiko-Douala Road Cameroon<br />
+                </span>
+              </li>
+              <li className="flex flex-col">
                 <div className="flex items-center gap-2">
-                  <FaWhatsapp size={16} className="text-yellow-400" /> +237 677287778
+                  <FaWhatsapp size={16} className="text-yellow-400" /> +237
+                  677287778
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone size={16} className="text-yellow-400" /> +237 658677206
                 </div>
               </li>
-              
-                          <li className="flex items-center gap-2">
-                            <Mail size={16} className="text-yellow-400" /> contact@solif-coop-bod.com
-                          </li>
-                        
-             
+              <li className="flex items-center gap-2">
+                <Mail size={16} className="text-yellow-400" />{" "}
+                contact@solif-coop-bod.com
+              </li>
             </ul>
           </div>
 
@@ -74,7 +71,11 @@ export default function ContactPage() {
               <Input placeholder="Your Name" required />
               <Input type="email" placeholder="Your Email" required />
               <Input placeholder="Subject" required />
-              <Textarea placeholder="Message" required className="min-h-[120px]" />
+              <Textarea
+                placeholder="Message"
+                required
+                className="min-h-[120px]"
+              />
               <Button
                 type="submit"
                 className="bg-green-600 hover:bg-green-700 text-white"
@@ -86,7 +87,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Find Us Section without Map */}
+      {/* Find Us Section */}
       <section className="py-12 bg-gray-50 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl font-semibold mb-4">Find Us</h2>
@@ -102,6 +103,16 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/237677287778"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform transform hover:scale-110 z-50"
+      >
+        <FaWhatsapp size={28} />
+      </a>
     </main>
   );
 }

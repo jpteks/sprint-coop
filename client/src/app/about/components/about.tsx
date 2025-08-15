@@ -104,14 +104,14 @@ export default function AboutPage() {
           src="/about.jpeg"
           alt="About SOLIF-COOP-BOD"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
         <div className="absolute inset-0 bg-black/70 flex items-center justify-center flex-col px-4">
-          <h1 className="text-white text-2xl md:text-3xl font-bold text-center">
+          <h1 className="text-xl  md:text-3xl lg:text-4xl font-bold leading-snug">
             Empowering Farmers, Transforming Agriculture, Shaping the Future
           </h1>
-          <p className="text-white text-md md:text-xl  text-justify mt-4 max-w-3xl">
+          <p className="mt-4 max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-6 sm:leading-7 md:leading-8 font-normal opacity-90 text-sm sm:text-base md:text-lg">
             Since 2022, SOLIF-COOP-BOD has been training farmers, advancing the
             agro–value chain, and transforming crops like cassava and other
             agricultural products. We are also involved in livestock and
@@ -124,7 +124,7 @@ export default function AboutPage() {
 
       {/* Why We Were Created */}
       <section className="container mx-auto p-6">
-        <h2 className="text-3xl font-bold text-center mb-6">
+        <h2 className="md:text-3xl text-2xl font-bold text-center mb-6">
           Why We Were <span className="text-green-600">Created</span>
         </h2>
         <motion.div
