@@ -18,6 +18,10 @@ export default function Navbar() {
     { href: "/contact", label: "Contact" },
   ];
 
+  // WhatsApp link with predefined message
+  const whatsappLink =
+    "https://wa.me/237677287778?text=I%20wish%20to%20be%20a%20member%20of%20SOLIF-COOP-BOD";
+
   return (
     <header className="w-full border-b shadow-sm bg-white sticky top-0 z-50 font-sans ">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
@@ -32,13 +36,15 @@ export default function Navbar() {
               className="object-contain"
             />
           </div>
-         <div className="flex flex-col">
-         <h1 className="text-sm md:text-lg font-bold text-green-600 leading-none">
-            SOLIF-COOP-BOD
-          </h1>
-          <p className="md:text-xs text-8px text-yellow-400">Spring of Life Cooperative with Board of Directors</p>
-          
-         </div>
+          <div className="flex flex-col">
+          <p className="md:text-xs text-8px text-yellow-400">
+              Spring of Life Cooperative society with Board of Directors
+            </p>
+            <h1 className="text-sm md:text-lg font-bold text-green-600 leading-none">
+              SOLIF-COOP-BOD
+            </h1>
+            
+          </div>
         </Link>
 
         {/* Desktop Nav Links */}
@@ -56,15 +62,14 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-            <div className="hidden md:block">
-          <Button className="bg-green-600 hover:bg-green-700 font-sans text-[15px] text-white rounded-md px-4 py-2">
-          Become a member
-          </Button>
-        </div>
+          <div className="hidden md:block">
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button className="bg-green-600 hover:bg-green-700 font-sans text-[15px] text-white rounded-md px-4 py-2">
+                Become a member
+              </Button>
+            </a>
+          </div>
         </nav>
-
-        {/* Desktop Join Us Button */}
-      
 
         {/* Mobile Menu */}
         <div className="md:hidden">
@@ -89,9 +94,11 @@ export default function Navbar() {
                     {link.label}
                   </Link>
                 ))}
-                <Button className="bg-green-600 hover:bg-green-700 text-white mt-4">
-                  Join Us
-                </Button>
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-green-600 hover:bg-green-700 text-white mt-4">
+                    Become a member
+                  </Button>
+                </a>
               </div>
             </SheetContent>
           </Sheet>
