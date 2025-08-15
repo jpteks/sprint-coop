@@ -50,8 +50,8 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 text-white flex flex-col items-center">
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug">
-            Empowering Farmers, <span className="text-green-400">Enriching Communities</span>
+          <h1 className="text-xl  md:text-3xl lg:text-4xl font-bold leading-snug">
+            Empowering Agriculture, <span className="text-green-400">Enriching Communities</span>
           </h1>
           <p className="mt-4 max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-6 sm:leading-7 md:leading-8 font-normal opacity-90 text-sm sm:text-base md:text-lg">
             SPRING OF LIFE Cooperative Society with Board of Directors (SOLIF-COOP-BOD) transforms
