@@ -77,7 +77,7 @@ export default function Home() {
             internationally.
           </p>
 
-          <div className="mt-4 flex flex-wrap justify-center gap-4">
+          <div className="mt-2 flex flex-wrap justify-center gap-4">
             {/* Become a member */}
             <a
               href="https://wa.me/237677287778?text=I%20wish%20to%20be%20a%20member%20of%20SOLIF-COOP-BOD"
@@ -105,7 +105,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 mt-4 flex flex-wrap justify-center gap-4 sm:gap-6">
+        <div className="relative z-10 mt-2 flex flex-wrap justify-center gap-4 sm:gap-6">
           <Card className="flex items-center gap-2 sm:gap-4 bg-black/40 backdrop-blur-md text-white px-3 sm:px-4 py-2 border-none w-32 sm:w-40">
             <Users className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-500" />
             <div>
