@@ -49,7 +49,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="relative h-[620px]   md:h-[650px] flex flex-col items-center justify-center text-center px-4"
+        className="relative h-[630px] md:h-[650px] flex flex-col items-center justify-center text-center px-4"
       >
         <div className="absolute inset-0">
           <Image
@@ -138,9 +138,9 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="max-w-7xl mx-auto px-8 md:px-6  py-16"
+        className="max-w-7xl mx-auto px-6  py-16"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+        <div className="grid  md:grid-cols-2 gap-8  items-start">
           <div> 
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Our <span className="text-green-600">Mission</span>
@@ -214,7 +214,7 @@ export default function Home() {
         viewport={{ once: true }}
         className="bg-gray-50 py-16"
       >
-        <div className="max-w-7xl mx-auto px-10 py-16">
+        <div className="max-w-7xl mx-auto px-6 py-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6">
             Our <span className="text-green-600">Core Services</span>
           </h2>
@@ -264,7 +264,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 py-16"
+        className="max-w-7xl mx-auto px-6 py-16"
       >
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6">
           Latest <span className="text-green-600">News</span>
