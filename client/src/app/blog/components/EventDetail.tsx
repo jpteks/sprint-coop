@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 
-import { SanityDocument } from "next-sanity";
+import { PortableText, SanityDocument } from "next-sanity";
+import { Button } from "@/components/ui/button";
 
 interface Props {
   event: SanityDocument;
@@ -12,7 +13,7 @@ export default function EventDetailClient({ event }: Props) {
  
   
   return (
-    <main className="container mx-auto max-w-3xl p-6 min-h-screen">
+    <main className="container mx-auto max-w-3xl p-6 min-h-screen font-sans">
       <h1 className="text-4xl font-bold mb-6">{event.title}</h1>
 
       {event.imageUrl && (
@@ -25,28 +26,20 @@ export default function EventDetailClient({ event }: Props) {
           />
         </div>
       )}
+<div className="mb-4 text-black ">
+  <PortableText value={event.body} />
+</div>
 
-      <p className="mb-4 text-blackpale font-mons-medium">{event.description}</p>
 
-      <p className="mb-2 font-mons-medium">
-        {new Date(event.date).toLocaleDateString(undefined, {
-          day: "2-digit",
-          month: "long",
-          year: "numeric",
-        })}{" "}
-        — {event.time}hr
-      </p>
 
-      <p className="mb-2 text-sm font-mons-medium">{event.location}</p>
+      <p className="uppercase text-xs text-green-600 mb-6">Category: {event.category}</p>
 
-      <p className="uppercase text-xs text-gray-400 mb-6">Status: {event.status}</p>
-
-      <button
+      <Button
         onClick={() => window.history.back()}
-        className="px-4 py-2 bg-blue text-white rounded hover:bg-green"
+        className="px-4 py-2 bg-green-600 rounded-lg text-white  hover:bg-green-700"
       >
         Back
-      </button>
+      </Button>
     </main>
   );
 }

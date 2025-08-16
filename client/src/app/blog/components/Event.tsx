@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { PortableText } from "next-sanity";
 import {
   Pagination,
   PaginationContent,
@@ -22,52 +23,40 @@ interface EventsListProps {
 
 export default function EventsList({ events }: EventsListProps) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [filter, setFilter] = useState<"all" | "past" | "present" | "future">("all");
+  const [filter, setFilter] = useState<"all" | "events" | "our-work">("all");
   const eventsPerPage = 6;
   const params = useParams();
-  const locale = params?.locale || "fr"; // fallback to 'fr' if missing
 
   // Filter events by status
   const filteredEvents = events.filter((event) =>
-    filter === "all" ? true : event.status?.toLowerCase() === filter
+    filter === "all" ? true : event.category?.toLowerCase() === filter
   );
 
   // Pagination logic
   const indexOfLastEvent = currentPage * eventsPerPage;
   const indexOfFirstEvent = indexOfLastEvent - eventsPerPage;
-  const currentEvents = filteredEvents.slice(indexOfFirstEvent, indexOfLastEvent);
+  const currentEvents = filteredEvents.slice(
+    indexOfFirstEvent,
+    indexOfLastEvent
+  );
   const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
 
-  // Translate status (plain text)
-  function translateStatus(status: string | undefined) {
-    if (!status) return "";
-    switch (status.toLowerCase()) {
-      case "past":
-        return "Past";
-      case "present":
-        return "Present";
-      case "future":
-        return "Future";
-      default:
-        return status;
-    }
-  }
+
 
   return (
-    <main className="container mx-auto min-h-screen max-w-7xl p-6">
-      <h1 className="text-4xl font-bold mb-8 text-center">Events</h1>
+    <main className="container mx-auto min-h-screen max-w-7xl p-6 font-sans">
+      <h1 className="text-4xl font-bold mb-8 text-center">Latest News</h1>
 
       {/* Filter Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 mb-6 font-natom-bold">
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
         {[
           { key: "all", label: "All" },
-          { key: "present", label: "Present" },
-          { key: "past", label: "Past" },
-          { key: "future", label: "Future" },
+          { key: "events", label: "Events" },
+          { key: "our-work", label: "Our works" },
         ].map(({ key, label }) => (
           <Button
             key={key}
-            className="flex flex-wrap justify-center gap-3 mb-6 font-natom-bold"
+            className="flex flex-wrap justify-center gap-3 mb-6 "
             variant={filter === key ? "default" : "outline"}
             onClick={() => {
               setFilter(key as typeof filter);
@@ -96,29 +85,23 @@ export default function EventsList({ events }: EventsListProps) {
               </div>
             )}
             <CardHeader>
-              <CardTitle className="font-natom-bold text-blue">{post.title}</CardTitle>
+              <CardTitle className=" text-black/60">
+                {post.title}
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <p>
-                {new Date(post.date)
-                  .toLocaleDateString(locale === "fr" ? "fr-FR" : "en-GB", {
-                    day: "2-digit",
-                    month: "long",
-                    year: "numeric",
-                  })
-                  .replace(/ /g, "-")}{" "}
-                — {post.time}
+              <p className="mt-2 text-xs uppercase tracking-wide text-green-600">
+                Category: {post.category}
               </p>
-              <p className="text-sm text-gray-500">{post.location}</p>
-              <p className="mt-2 text-xs uppercase tracking-wide text-gray-400">
-                Status: {translateStatus(post.status)}
-              </p>
-              {post.description && (
-                <p className="mt-2 text-gray-700 text-sm line-clamp-3">{post.description}</p>
+              {post.body && (
+               <div className="mb-4 text-black" >
+               <PortableText value={post.body} />
+             </div>
+             
               )}
               <Link
-                href={`/${locale}/events/${post._id}`}
-                className="mt-3 inline-block text-blue hover:underline"
+                href={`/blog/${post._id}`}
+                className="mt-3 inline-block text-yellow-600 hover:underline"
               >
                 Read more
               </Link>
@@ -150,7 +133,9 @@ export default function EventsList({ events }: EventsListProps) {
               ))}
               <PaginationItem>
                 <PaginationNext
-                  onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                  onClick={() =>
+                    setCurrentPage((p) => Math.min(totalPages, p + 1))
+                  }
                   aria-disabled={currentPage === totalPages}
                 />
               </PaginationItem>
