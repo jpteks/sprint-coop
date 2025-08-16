@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///home/infy/Documents/Project/sprint-coop/src/app/blog/page.tsx"],"sourcesContent":["export default function Blog() {\n    return (\n        <>\n            <h1>Welcome to the Blog Page</h1>\n            <p>This page contains our latest blog posts and articles.</p>\n            <p>Stay tuned for updates and insights!</p>\n        </>\n    );\n}"],"names":[],"mappings":";;;;;AAAe,SAAS;IACpB,qBACI;;0BACI,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;0BAAE;;;;;;0BACH,8OAAC;0BAAE;;;;;;;;AAGf","debugId":null}}]
-}

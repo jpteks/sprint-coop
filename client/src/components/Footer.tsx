@@ -1,8 +1,8 @@
 "use client";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Twitter, Linkedin, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 export default function Footer() {
@@ -22,12 +22,12 @@ export default function Footer() {
               />
             </div>
             <div>
-            <p className="text-base">
-                Spring of Life Cooperative society with Board of Directors
-              </p>
-              <h2 className="text-sm font-bold text-yellow-400">
-                SOLIF-COOP-BOD
-              </h2>
+            <p className="md:text-xs text-6px text-yellow-400">
+              Spring of Life Cooperative society with Board of Directors
+            </p>
+            <h1 className="text-[10px] md:text-md font-bold text-white leading-none">
+              SOLIF-COOP-BOD
+            </h1>
              
             </div>
           </div>
@@ -43,21 +43,21 @@ export default function Footer() {
               aria-label="Facebook"
               className="hover:text-yellow-400"
             >
-              <Facebook size={18} />
+              <FaFacebook size={18} />
             </Link>
             <Link
               href="#"
               aria-label="Twitter"
               className="hover:text-yellow-400"
             >
-              <Twitter size={18} />
+              <FaTiktok size={18} />
             </Link>
             <Link
               href="#"
               aria-label="LinkedIn"
               className="hover:text-yellow-400"
             >
-              <Linkedin size={18} />
+              <FaLinkedin size={18} />
             </Link>
           </div>
         </div>
