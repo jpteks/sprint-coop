@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///home/infy/Documents/Project/sprint-coop/src/app/about/page.tsx"],"sourcesContent":["\nexport default function About() {\n  return (\n    <>\n        <h1>Welcome to the Home Page</h1>\n        <p>This is the main entry point of our application.</p>\n        <p>Explore the features and enjoy your stay!</p>\n    </>\n  );\n}"],"names":[],"mappings":";;;;;AACe,SAAS;IACtB,qBACE;;0BACI,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;0BAAE;;;;;;0BACH,8OAAC;0BAAE;;;;;;;;AAGX","debugId":null}}]
+}

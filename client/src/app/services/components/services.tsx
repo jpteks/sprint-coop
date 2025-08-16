@@ -58,7 +58,7 @@ export default function ServicesPage() {
               <h2 className="text-2xl font-semibold mb-3 text-green-600">
                 {service.title}
               </h2>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 text-base leading-relaxed">
                 {service.description}
               </p>
             </div>
@@ -77,7 +77,7 @@ export default function ServicesPage() {
         <h2 className="text-3xl font-bold mb-4">
           Ready to Transform Your Farming?
         </h2>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 text-base mb-6">
           Join SOLIF-COOP-BOD today and take the first step toward smarter, more
           profitable farming.
         </p>
