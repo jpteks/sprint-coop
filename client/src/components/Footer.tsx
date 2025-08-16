@@ -22,12 +22,12 @@ export default function Footer() {
               />
             </div>
             <div>
-            <p className="text-base">
-                Spring of Life Cooperative society with Board of Directors
-              </p>
-              <h2 className="text-sm font-bold text-yellow-400">
-                SOLIF-COOP-BOD
-              </h2>
+            <p className="md:text-xs text-6px text-yellow-400">
+              Spring of Life Cooperative society with Board of Directors
+            </p>
+            <h1 className="text-[10px] md:text-md font-bold text-white leading-none">
+              SOLIF-COOP-BOD
+            </h1>
              
             </div>
           </div>

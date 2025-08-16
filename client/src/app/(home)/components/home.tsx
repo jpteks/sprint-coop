@@ -49,7 +49,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="relative h-[550px] sm:h-[600px] md:h-[650px] flex flex-col items-center justify-center text-center px-4"
+        className="relative h-[620px]   md:h-[650px] flex flex-col items-center justify-center text-center px-4"
       >
         <div className="absolute inset-0">
           <Image
@@ -73,7 +73,7 @@ export default function Home() {
             dedicated to transforming agriculture and improving rural
             livelihoods. Through innovation, sustainability, and community
             spirit, we empower farmers to increase productivity, add value to
-            their harvests, and access better markets — locally and
+            their harvests, and access better markets locally and
             internationally.
           </p>
 
@@ -105,7 +105,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative z-10 mt-2 flex flex-wrap justify-center gap-4 sm:gap-6">
+        <div className="relative z-10 mt-10 flex flex-wrap justify-center gap-4 sm:gap-6">
           <Card className="flex items-center gap-2 sm:gap-4 bg-black/40 backdrop-blur-md text-white px-3 sm:px-4 py-2 border-none w-32 sm:w-40">
             <Users className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-500" />
             <div>
@@ -138,10 +138,10 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="max-w-7xl mx-auto px-4 sm:px-6 py-16"
+        className="max-w-7xl mx-auto px-8 md:px-6  py-16"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
-          <div>
+          <div> 
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Our <span className="text-green-600">Mission</span>
             </h2>
@@ -214,7 +214,7 @@ export default function Home() {
         viewport={{ once: true }}
         className="bg-gray-50 py-16"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-10 py-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6">
             Our <span className="text-green-600">Core Services</span>
           </h2>
