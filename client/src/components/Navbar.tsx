@@ -37,7 +37,7 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col">
-          <p className="md:text-xs text-8px text-yellow-400">
+          <p className="md:text-xs text-[6px] text-yellow-400">
               Spring of Life Cooperative society with Board of Directors
             </p>
             <h1 className="text-sm md:text-lg font-bold text-green-600 leading-none">
