@@ -42,7 +42,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col font-sans">
+    <div className="flex flex-col font-sans ">
       {/* ✅ Hero Section */}
       <motion.section
         variants={sectionVariants}

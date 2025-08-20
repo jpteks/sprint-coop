@@ -192,7 +192,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-yellow-500 py-4">
-        <p className="text-center text-[8px] ">
+        <p className="text-center text-[8px] md:text-[12px] ">
           © {new Date().getFullYear()} SOLIF-COOP-BOD. All rights reserved. |
           Designed by{" "}
           <Link

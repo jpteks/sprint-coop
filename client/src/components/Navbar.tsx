@@ -23,7 +23,7 @@ export default function Navbar() {
     "https://wa.me/237677287778?text=I%20wish%20to%20be%20a%20member%20of%20SOLIF-COOP-BOD";
 
   return (
-    <header className="w-full border-b shadow-sm bg-white sticky top-0 z-50 font-sans ">
+    <header className="w-full  bg-white sticky top-0 z-50 font-sans ">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         
         {/* Logo */}
