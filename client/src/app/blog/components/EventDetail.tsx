@@ -9,10 +9,11 @@ interface Props {
 }
 
 export default function EventDetailClient({ event }: Props) {
-  // helper: check if media is video
-  const isVideo =
-    event.media?.asset?._ref?.includes("file") ||
-    event.media?.asset?.mimeType?.startsWith("video");
+  // get first media item (schema allows only one anyway)
+  const mediaItem = event.media?.[0];
+  const mimeType = mediaItem?.asset?.mimeType || "";
+  const isVideo = mimeType.startsWith("video");
+  const mediaUrl = mediaItem?.asset?.url;
 
   return (
     <main className="container mx-auto max-w-3xl p-6 min-h-screen font-sans">
@@ -20,20 +21,20 @@ export default function EventDetailClient({ event }: Props) {
       <h1 className="text-4xl font-bold mb-6">{event.title}</h1>
 
       {/* Media (Image or Video) */}
-      {event.media && (
+      {mediaUrl && (
         <div className="relative w-full h-64 mb-6">
           {isVideo ? (
             <video
               controls
               className="w-full h-full object-cover rounded-md"
             >
-              <source src={event.media.asset.url} type="video/mp4" />
+              <source src={mediaUrl} type={mimeType} />
               Your browser does not support the video tag.
             </video>
           ) : (
             <Image
-              src={event.media.asset.url}
-              alt={event.title}
+              src={mediaUrl}
+              alt={event.title || "Event media"}
               fill
               className="object-cover rounded-md"
             />
