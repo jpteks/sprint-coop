@@ -59,7 +59,7 @@ export default function ContactPage() {
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-yellow-400" />{" "}
-                contact@solifcoopbod.com
+                info@solifcoopbod.com
               </li>
             </ul>
           </div>
