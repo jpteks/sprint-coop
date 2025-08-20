@@ -8,7 +8,20 @@ const EVENTS_QUERY = `*[_type == "blog"]{
   title,
   body,
   category,
- media
+  media[]{
+    _type == "image" => {
+      asset->{
+        url,
+        mimeType
+      }
+    },
+    _type == "file" => {
+      asset->{
+        url,
+        mimeType
+      }
+    }
+  }
 }`;
 
 const options = { next: { revalidate: 30 } };
