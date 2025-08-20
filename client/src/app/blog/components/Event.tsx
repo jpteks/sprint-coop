@@ -71,42 +71,55 @@ export default function EventsList({ events }: EventsListProps) {
       {/* Events Grid */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {currentEvents.map((post) => (
-          <Card key={post._id} className="overflow-hidden h-full">
-            {post.imageUrl && (
-              <div className="relative w-full h-48">
-                <Image
-                  src={post.imageUrl}
-                  alt={post.title || ""}
-                  fill
-                  quality={90}
-                  priority
-                  className="object-cover"
-                />
-              </div>
-            )}
-            <CardHeader>
-              <CardTitle className=" text-black/60">
-                {post.title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="mt-2 text-xs uppercase tracking-wide text-green-600">
-                Category: {post.category}
-              </p>
-              {post.body && (
-               <div className="mb-4 text-black" >
-               <PortableText value={post.body} />
-             </div>
-             
-              )}
-              <Link
-                href={`/blog/${post._id}`}
-                className="mt-3 inline-block text-yellow-600 hover:underline"
-              >
-                Read more
-              </Link>
-            </CardContent>
-          </Card>
+         <Card key={post._id} className="overflow-hidden h-full">
+  {/* Thumbnail (Image or Video) */}
+  {post.media && (
+    <div className="relative w-full h-48">
+      {post.media.asset?.mimeType?.startsWith("video") ? (
+        <video
+          controls
+          className="w-full h-full object-cover rounded-md"
+        >
+          <source src={post.media.asset.url} type={post.media.asset.mimeType} />
+          Your browser does not support the video tag.
+        </video>
+      ) : (
+        <Image
+          src={post.media.asset.url}
+          alt={post.title || ""}
+          fill
+          quality={90}
+          priority
+          className="object-cover"
+        />
+      )}
+    </div>
+  )}
+
+  {/* Card Content */}
+  <CardHeader>
+    <CardTitle className="text-black/70">{post.title}</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <p className="mt-2 text-xs uppercase tracking-wide text-green-600">
+      Category: {post.category}
+    </p>
+
+    {post.body && (
+      <div className="mb-4 text-black line-clamp-3">
+        <PortableText value={post.body} />
+      </div>
+    )}
+
+    <Link
+      href={`/blog/${post._id}`}
+      className="mt-3 inline-block text-yellow-600 hover:underline"
+    >
+      Read more →
+    </Link>
+  </CardContent>
+</Card>
+
         ))}
       </div>
 
