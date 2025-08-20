@@ -34,5 +34,15 @@ export const blogType = defineType({
         layout: 'radio',
       },
     }),
+    defineField({
+      name: "youtubeLink",
+      title: "Video Link",
+      type: "url",
+      description: "Optional  video link related to the event",
+      validation: (rule) =>
+        rule.uri({
+          scheme: ["http", "https"],
+        }),
+    }),
   ],
 })

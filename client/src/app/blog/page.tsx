@@ -8,6 +8,7 @@ const EVENTS_QUERY = `*[_type == "blog"]{
   title,
   body,
   category,
+  youtubeLink,
   "imageUrl": image.asset->url
 }`;
 

@@ -212,9 +212,9 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="bg-gray-50 container mx-auto p-6"
+        className="bg-gray-50 mx-auto p-6"
       >
-        <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6">
             Our <span className="text-green-600">Core Services</span>
           </h2>
@@ -264,7 +264,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="container mx-auto p-6"
+        className=" mx-auto p-6"
       >
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6">
           Latest <span className="text-green-600">News</span>
@@ -286,7 +286,7 @@ export default function Home() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="bg-gray-50 text-black text-center container mx-auto p-6"
+        className="bg-gray-50 text-black text-center mx-auto p-6"
       >
         <h2 className="text-lg sm:text-xl font-semibold">
           Ready to Join Our Community?
