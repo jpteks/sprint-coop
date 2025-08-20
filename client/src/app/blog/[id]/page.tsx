@@ -7,7 +7,7 @@ const EVENT_QUERY = `*[_type == "blog" && _id == $id][0]{
   title,
   body,
   category,
-  "imageUrl": image.asset->url
+  media
 }`;
 
 
