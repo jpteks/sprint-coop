@@ -8,7 +8,7 @@ const EVENTS_QUERY = `*[_type == "blog"]{
   title,
   body,
   category,
-  "imageUrl": image.asset->url
+ media
 }`;
 
 const options = { next: { revalidate: 30 } };
