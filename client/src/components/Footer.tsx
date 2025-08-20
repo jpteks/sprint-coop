@@ -183,7 +183,7 @@ export default function Footer() {
                 className="flex items-center gap-2 hover:text-yellow-500"
               >
                 <Mail size={16} className="text-yellow-400" />
-                contact@solif-coop-bod.com
+                contact@solifcoopbod.com
               </a>
             </li>
           </ul>
