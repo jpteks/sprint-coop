@@ -122,3 +122,29 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* styles/globals.css */
+body {
+  font-size: 16px; /* Base font size */
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Tablets and up */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
