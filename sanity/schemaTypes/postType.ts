@@ -17,10 +17,27 @@ export const blogType = defineType({
       of: [{ type: 'block' }],
     }),
     defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
+      name: "media",
+      title: "Media",
+      type: "array",
+      of: [
+        { type: "image" },
+        { 
+          type: "file",
+          title: "Video",
+          options: {
+            accept: "video/*"
+          }
+        },
+      ],
+      validation: (rule) => rule.max(1), // only allow one item
     }),
+    
+    // defineField({
+    //   name: 'image',
+    //   title: 'Image',
+    //   type: 'image',
+    // }),
     defineField({
       name: 'category',
       title: 'Category',
@@ -34,5 +51,16 @@ export const blogType = defineType({
         layout: 'radio',
       },
     }),
+
+    // defineField({
+    //   name: "youtubeLink",
+    //   title: "Video Link",
+    //   type: "url",
+    //   description: "Optional  video link related to the event",
+    //   validation: (rule) =>
+    //     rule.uri({
+    //       scheme: ["http", "https"],
+    //     }),
+    // }),
   ],
 })
