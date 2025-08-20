@@ -7,7 +7,20 @@ const EVENT_QUERY = `*[_type == "blog" && _id == $id][0]{
   title,
   body,
   category,
-  media
+  media[]{
+    _type == "image" => {
+      asset->{
+        url,
+        mimeType
+      }
+    },
+    _type == "file" => {
+      asset->{
+        url,
+        mimeType
+      }
+    }
+  }
 }`;
 
 
